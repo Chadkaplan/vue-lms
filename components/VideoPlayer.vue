@@ -23,6 +23,7 @@ export default Vue.extend({
     tick() {
       this.ticker = setInterval(() => {
         this.currentTime++
+        this.$emit('currentTime', this.currentTime)
       }, 1000)
     }
   }

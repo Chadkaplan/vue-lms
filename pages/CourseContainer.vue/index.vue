@@ -3,7 +3,10 @@
     <v-row>
       <v-col>
         <!-- @currentTime="currentTimeIncrementer" -->
-        <VideoPlayer :current-time="currentTime" />
+        <VideoPlayer
+          :current-time="currentTime"
+          @currentTimer="updateCurrentTime"
+        />
         <TopicDetail :topic-id="topicId" />
       </v-col>
       <v-col>
@@ -50,6 +53,11 @@ export default Vue.extend({
   },
   data() {
     return { topicId: v4(), currentTime: 0, ticker: undefined }
+  },
+  methods: {
+    updateCurrentTime(currentTime: number) {
+      this.currentTime = currentTime
+    }
   }
 })
 </script>
