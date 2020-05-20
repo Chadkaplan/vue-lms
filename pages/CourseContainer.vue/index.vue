@@ -2,7 +2,9 @@
   <div>
     <v-row>
       <v-col>
-        <v-img src="https://picsum.photos/410/300?random" width="50rem"></v-img>
+        <!-- @currentTime="currentTimeIncrementer" -->
+        <VideoPlayer :current-time="currentTime" />
+        <TopicDetail :topic-id="topicId" />
       </v-col>
       <v-col>
         <v-navigation-drawer width="full" permanent>
@@ -36,9 +38,18 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Vue from 'vue'
+import { v4 } from 'uuid'
+import TopicDetail from '@/components/TopicDetail.vue'
+import VideoPlayer from '@/components/VideoPlayer.vue'
 export default Vue.extend({
-  //   props: []
+  components: {
+    TopicDetail,
+    VideoPlayer
+  },
+  data() {
+    return { topicId: v4(), currentTime: 0, ticker: undefined }
+  }
 })
 </script>
