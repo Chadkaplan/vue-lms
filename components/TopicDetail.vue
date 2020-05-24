@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ topicId }}</h1>
+  <h1>{{ currentTime }}</h1>
 </template>
 
 <script lang="ts">
@@ -8,6 +8,10 @@ export default Vue.extend({
   props: {
     topicId: {
       type: String,
+      required: true
+    },
+    currentTime: {
+      type: Number,
       required: true
     }
   }

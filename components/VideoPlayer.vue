@@ -5,7 +5,6 @@
       src="https://picsum.photos/410/300?random"
       width="50rem"
     >
-      <h1 class="absolute">{{ currentTime }}</h1>
     </v-img>
   </div>
 </template>
@@ -29,12 +28,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style>
-.relative {
-  position: relative;
-}
-.absolute {
-  position: absolute;
-}
-</style>

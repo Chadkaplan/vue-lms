@@ -2,10 +2,7 @@
   <div>
     <v-row>
       <v-col>
-        <VideoPlayer
-          :current-time="currentTime"
-          @currentTimer="updateCurrentTime"
-        />
+        <VideoPlayer :hero="hero" @currentTime="updateCurrentTime" />
         <TopicDetail :topic-id="topicId" :current-time="currentTime" />
         <div>Title: {{ data.title }}</div>
         <!-- <div :v-for="authors in data" :key="authors">Authors: {{ authors }}</div> -->
@@ -19,7 +16,7 @@
             <v-tab>Table of Contents</v-tab>
             <v-tab>Notes</v-tab>
           </v-tabs>
-          <!-- Accordion removes extra space around panels, preference choice -->
+          <!--  -->
           <v-expansion-panels accordion>
             <v-expansion-panel v-for="(section, i) in 5" :key="i">
               <!-- TODO Set up dynamic numbering system for sections -->
