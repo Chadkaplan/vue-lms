@@ -2,12 +2,13 @@
   <div>
     <v-row>
       <v-col>
-        <!-- @currentTime="currentTimeIncrementer" -->
         <VideoPlayer
           :current-time="currentTime"
           @currentTimer="updateCurrentTime"
         />
-        <TopicDetail :topic-id="topicId" />
+        <TopicDetail :topic-id="topicId" :current-time="currentTime" />
+        <div>Title: {{ data.title }}</div>
+        <!-- <div :v-for="authors in data" :key="authors">Authors: {{ authors }}</div> -->
       </v-col>
       <v-col>
         <v-navigation-drawer width="full" permanent>
@@ -44,6 +45,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { v4 } from 'uuid'
+import data from '../../components/topicDetailData'
 import TopicDetail from '@/components/TopicDetail.vue'
 import VideoPlayer from '@/components/VideoPlayer.vue'
 export default Vue.extend({
@@ -52,7 +54,7 @@ export default Vue.extend({
     VideoPlayer
   },
   data() {
-    return { topicId: v4(), currentTime: 0, ticker: undefined }
+    return { topicId: v4(), currentTime: 0, data }
   },
   methods: {
     updateCurrentTime(currentTime: number) {
