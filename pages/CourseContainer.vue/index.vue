@@ -18,9 +18,11 @@
           </v-tabs>
           <!--  -->
           <v-expansion-panels accordion>
-            <v-expansion-panel v-for="(section, i) in 5" :key="i">
+            <v-expansion-panel v-for="datum in data" :key="datum">
               <!-- TODO Set up dynamic numbering system for sections -->
-              <v-expansion-panel-header>Section</v-expansion-panel-header>
+              <v-expansion-panel-header>{{
+                datum.title
+              }}</v-expansion-panel-header>
               <v-expansion-panel-content>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

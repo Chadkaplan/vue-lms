@@ -20,7 +20,7 @@ export default [
   {
     title: 'Another title',
     slug: 'Another slug',
-    hero: 'https://via.placeholder.com/150',
+    hero: 'https://via.placeholder.com/250',
     duration: 11,
     details: 'More details',
     ratings: [5, 3, 2, 4, 2, 1],
