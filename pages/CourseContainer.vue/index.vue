@@ -11,12 +11,6 @@
         <v-navigation-drawer width="full" permanent>
           <h1>Title of Course</h1>
           <h3>Author of Course</h3>
-          <!-- Potentially unnecessary, saw the tabs idea on pluralsight -->
-          <v-tabs grow>
-            <v-tab>Table of Contents</v-tab>
-            <v-tab>Notes</v-tab>
-          </v-tabs>
-          <!--  -->
           <v-expansion-panels accordion>
             <v-expansion-panel v-for="datum in data" :key="datum">
               <!-- TODO Set up dynamic numbering system for sections -->

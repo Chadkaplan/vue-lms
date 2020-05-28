@@ -1,7 +1,7 @@
-const segment1 = {}
-const segment2 = {}
-const segment3 = {}
-const segment4 = {}
+const segment1 = { segment: 1 }
+const segment2 = { segment: 2 }
+const segment3 = { segment: 3 }
+const segment4 = { segment: 4 }
 const syllabus = {
   segments: [segment1, segment2, segment3, segment4]
 }
@@ -27,5 +27,16 @@ export default [
     authors: ['Mom', 'Dad'],
     created: 10152019,
     updated: [10152019, 1013020]
+  },
+  {
+    title: 'Third title',
+    slug: 'Slug 3',
+    hero: 'https://via.placeholder.com/350',
+    duration: 3,
+    details: 'third details',
+    ratings: [3, 3, 2, 4, 2, 1],
+    authors: ['Third'],
+    created: 10142019,
+    updated: [10142019, 1012020]
   }
 ]
